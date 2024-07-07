@@ -75,6 +75,11 @@
             padding: 8px;
             text-align: center;
         }
+        .centered-box {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -88,8 +93,7 @@
                         <li><a href="index.html" class="text-white hover:text-yellow-300 transition-colors">Home</a></li>
                         <li><a href="objectives.html" class="text-white hover:text-yellow-300 transition-colors">Objectives</a></li>
                         <li><a href="use-cases.html" class="text-white hover:text-yellow-300 transition-colors">Use Cases</a></li>
-                        <li><a href="codes.html" class="text-white hover:text-yellow-300 transition-colors">Codes</a></li>
-                        <li><a href="performance-analysis.html" class="text-white hover:text-yellow-300 transition-colors">Performance Analysis</a></li>
+                        <li><a href="codes.html" class="text-white hover:text-yellow-300 transition-colors">Codes & Performance Analysis</a></li>
                         <li><a href="references.html" class="text-white hover:text-yellow-300 transition-colors">References</a></li>
                     </ul>
                 </nav>
@@ -170,20 +174,22 @@
                                 </tr>
                             </table>
                         </div>
-                        <div id="u4" class="use-case-box">
-                            <h4>Housing and Inclusiveness</h4>
-                            <img src="placeholder.png" alt="Algorithm Image">
-                            <a href="https://github.com/Supreethsk05/waste-management" target="_blank" class="code-link">View Code</a>
-                            <table class="use-case-table">
-                                <tr>
-                                    <th>Time Complexity</th>
-                                    <th>Space Complexity</th>
-                                </tr>
-                                <tr>
-                                    <td>O(n^3)</td>
-                                    <td>O(n^2)</td>
-                                </tr>
-                            </table>
+                        <div class="centered-box">
+                            <div id="u4" class="use-case-box">
+                                <h4>Housing and Inclusiveness</h4>
+                                <img src="placeholder.png" alt="Algorithm Image">
+                                <a href="https://github.com/Supreethsk05/waste-management" target="_blank" class="code-link">View Code</a>
+                                <table class="use-case-table">
+                                    <tr>
+                                        <th>Time Complexity</th>
+                                        <th>Space Complexity</th>
+                                    </tr>
+                                    <tr>
+                                        <td>O(n^3)</td>
+                                        <td>O(n^2)</td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -277,7 +283,7 @@
 
                 <div class="use-case-group">
                     <h3 class="font-bold mb-4">Urban Environment</h3>
-                    <div class="flex flex-wrap justify-between">
+                    <div class="centered-box">
                         <div id="u10" class="use-case-box">
                             <h4>Reduced Pollution</h4>
                             <img src="placeholder.png" alt="Algorithm Image">
@@ -364,6 +370,23 @@
                                     <td>O(n^2)</td>
                                 </tr>
                             </table>
+                        </div>
+                        <div class="centered-box">
+                            <div id="u15" class="use-case-box">
+                                <h4>Waste Management</h4>
+                                <img src="placeholder.png" alt="Algorithm Image">
+                                <a href="https://github.com/Supreethsk05/waste-management" target="_blank" class="code-link">View Code</a>
+                                <table class="use-case-table">
+                                    <tr>
+                                        <th>Time Complexity</th>
+                                        <th>Space Complexity</th>
+                                    </tr>
+                                    <tr>
+                                        <td>O(n^2)</td>
+                                        <td>O(n)</td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
