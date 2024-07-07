@@ -49,8 +49,8 @@
             align-items: center;
         }
         .use-case-box img {
-            width: 100px;
-            height: 100px;
+            width: 80%;
+            height: 80%;
             object-fit: cover;
             margin-bottom: 10px;
             border-radius: 10px;
@@ -66,7 +66,9 @@
             top: 50%;
             transform: translate(-50%, -50%);
             width: 90%;
-            max-width: 1100px;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -95,6 +97,11 @@
         .modal-close:hover {
             color: #f00;
         }
+        .highlight-link {
+            color: #2980b9;
+            font-weight: bold;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -122,7 +129,7 @@
             <h2 class="section-header">Governance</h2>
             <div class="section-content flex justify-center">
                 <div class="use-case-box" onclick="openModal('citizen-participation')">
-                    <img src="citizen_participation.webp" alt="Citizen Participation">
+                    <img src="placeholder.png" alt="Citizen Participation">
                     <p>Citizen Participation</p>
                 </div>
                 <div class="use-case-box" onclick="openModal('it-connectivity')">
@@ -227,7 +234,7 @@
             <p><strong>Algorithm:</strong> Secure Multi-Party Computation</p>
             <p><strong>Description:</strong> This algorithm allows multiple parties to compute a function over their inputs while keeping those inputs private.</p>
             <p><strong>Analysis:</strong> High security and privacy but complex implementation and requires high computational power.</p>
-            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+            <p><a href="codes.html" class="highlight-link">View Code</a> | <a href="performance-analysis.html" class="highlight-link">View Analysis</a></p>
         </div>
     </div>
 
@@ -241,7 +248,7 @@
             <p><strong>Algorithm:</strong> Network Flow Algorithms (e.g., Ford-Fulkerson)</p>
             <p><strong>Description:</strong> These algorithms optimize the flow of data through a network.</p>
             <p><strong>Analysis:</strong> Efficient network optimization but scalability and handling dynamic changes in network traffic can be challenging.</p>
-            <p><a href="https://github.com/OpenMined/PySyft">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+            <p><a href="codes.html" class="highlight-link">View Code</a> | <a href="performance-analysis.html" class="highlight-link">View Analysis</a></p>
         </div>
     </div>
 
@@ -255,7 +262,7 @@
             <p><strong>Algorithm:</strong> Genetic Algorithm</p>
             <p><strong>Description:</strong> This algorithm mimics the process of natural selection to find optimal solutions.</p>
             <p><strong>Analysis:</strong> Flexible and adaptable but requires tuning of parameters and may converge slowly.</p>
-            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+            <p><a href="codes.html" class="highlight-link">View Code</a> | <a href="performance-analysis.html" class="highlight-link">View Analysis</a></p>
         </div>
     </div>
 
@@ -269,7 +276,7 @@
             <p><strong>Algorithm:</strong> Simulated Annealing</p>
             <p><strong>Description:</strong> This algorithm searches for a good approximation to the global optimum in a large search space.</p>
             <p><strong>Analysis:</strong> Good for large, complex optimization problems but may require many iterations to find an optimal solution.</p>
-            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+            <p><a href="codes.html" class="highlight-link">View Code</a> | <a href="performance-analysis.html" class="highlight-link">View Analysis</a></p>
         </div>
     </div>
 
@@ -283,7 +290,7 @@
             <p><strong>Algorithm:</strong> Assignment Problem (Dynamic Programming)</p>
             <p><strong>Description:</strong> This algorithm finds the optimal assignment of resources to tasks.</p>
             <p><strong>Analysis:</strong> Finds optimal assignments but complexity increases with the number of resources and constraints.</p>
-            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+            <p><a href="codes.html" class="highlight-link">View Code</a> | <a href="performance-analysis.html" class="highlight-link">View Analysis</a></p>
         </div>
     </div>
 
@@ -297,7 +304,7 @@
             <p><strong>Algorithm:</strong> k-D Tree</p>
             <p><strong>Description:</strong> This algorithm is used for organizing points in a k-dimensional space.</p>
             <p><strong>Analysis:</strong> Efficient spatial queries and nearest neighbor searches but performance may degrade with high-dimensional data.</p>
-            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+            <p><a href="codes.html" class="highlight-link">View Code</a> | <a href="performance-analysis.html" class="highlight-link">View Analysis</a></p>
         </div>
     </div>
 
@@ -311,7 +318,7 @@
             <p><strong>Algorithm:</strong> Content-Based Filtering</p>
             <p><strong>Description:</strong> This algorithm recommends items based on user preferences and characteristics.</p>
             <p><strong>Analysis:</strong> Provides personalized recommendations but requires large datasets for training and may face cold start problems.</p>
-            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+            <p><a href="codes.html" class="highlight-link">View Code</a> | <a href="performance-analysis.html" class="highlight-link">View Analysis</a></p>
         </div>
     </div>
 
@@ -325,7 +332,7 @@
             <p><strong>Algorithm:</strong> Bipartite Matching</p>
             <p><strong>Description:</strong> This algorithm efficiently matches elements of two disjoint sets.</p>
             <p><strong>Analysis:</strong> Efficient matching in polynomial time but handling preferences and constraints can be complex.</p>
-            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+            <p><a href="codes.html" class="highlight-link">View Code</a> | <a href="performance-analysis.html" class="highlight-link">View Analysis</a></p>
         </div>
     </div>
 
@@ -339,7 +346,7 @@
             <p><strong>Algorithm:</strong> Decision Trees</p>
             <p><strong>Description:</strong> This algorithm uses a tree-like model for decision making.</p>
             <p><strong>Analysis:</strong> Easy to interpret and implement but may overfit with noisy data and requires pruning.</p>
-            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+            <p><a href="codes.html" class="highlight-link">View Code</a> | <a href="performance-analysis.html" class="highlight-link">View Analysis</a></p>
         </div>
     </div>
 
@@ -353,7 +360,7 @@
             <p><strong>Algorithm:</strong> Dijkstra’s Algorithm</p>
             <p><strong>Description:</strong> This algorithm finds the shortest path between nodes in a graph.</p>
             <p><strong>Analysis:</strong> Efficient for graphs with non-negative weights but may be slower for very large graphs.</p>
-            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+            <p><a href="codes.html" class="highlight-link">View Code</a> | <a href="performance-analysis.html" class="highlight-link">View Analysis</a></p>
         </div>
     </div>
 
@@ -367,7 +374,7 @@
             <p><strong>Algorithm:</strong> Floyd-Warshall Algorithm</p>
             <p><strong>Description:</strong> This algorithm finds shortest paths in a weighted graph with positive or negative edge weights.</p>
             <p><strong>Analysis:</strong> Provides comprehensive shortest path information but has high time complexity (O(n^3)) for large graphs.</p>
-            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+            <p><a href="codes.html" class="highlight-link">View Code</a> | <a href="performance-analysis.html" class="highlight-link">View Analysis</a></p>
         </div>
     </div>
 
@@ -381,7 +388,7 @@
             <p><strong>Algorithm:</strong> Ford-Fulkerson Algorithm</p>
             <p><strong>Description:</strong> This algorithm finds the maximum flow in a flow network.</p>
             <p><strong>Analysis:</strong> Finds maximum flow efficiently but requires multiple iterations and can be slow for large networks.</p>
-            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+            <p><a href="codes.html" class="highlight-link">View Code</a> | <a href="performance-analysis.html" class="highlight-link">View Analysis</a></p>
         </div>
     </div>
 
@@ -395,7 +402,7 @@
             <p><strong>Algorithm:</strong> Dynamic Programming (e.g., Traveling Salesman Problem)</p>
             <p><strong>Description:</strong> This algorithm finds the optimal route for visiting a set of locations and returning to the start.</p>
             <p><strong>Analysis:</strong> Finds optimal routes under given constraints but has high computational complexity for large datasets.</p>
-            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+            <p><a href="codes.html" class="highlight-link">View Code</a> | <a href="performance-analysis.html" class="highlight-link">View Analysis</a></p>
         </div>
     </div>
 
