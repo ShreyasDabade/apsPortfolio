@@ -3,231 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Use Cases - Smart City Planning Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Use Cases</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: #fff;
+            padding: 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        main {
+            padding: 20px;
+        }
+        h2, h3, h4 {
+            color: #333;
+        }
+        .use-case {
+            margin-bottom: 30px;
+        }
+        .use-case img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Smart City Planning Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="use-cases.html">Use Cases</a></li>
-                <li><a href="codes.html">Codes</a></li>
-                <li><a href="performance-analysis.html">Performance Analysis</a></li>
-                <li><a href="objectives.html">Objectives</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Smart City Planning: Use Cases</h1>
     </header>
-
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="objectives.html">Objectives</a>
+        <a href="use-cases.html">Use Cases</a>
+        <a href="codes.html">Code</a>
+        <a href="performance-analysis.html">Analysis</a>
+    </nav>
     <main>
-        <section id="use-cases">
-            <h2>Use Cases</h2>
-
-            <h3>Governance</h3>
-            <h4>Citizen Participation</h4>
+        <section class="use-case">
+            <h2>Governance</h2>
+            <h3>Citizen Participation</h3>
+            <img src="images/citizen-participation.jpg" alt="Citizen Participation">
             <p>
-                <strong>Introduction:</strong> Current citizen participation mechanisms often lack security and privacy, leading to mistrust and low engagement. By implementing Secure Multi-Party Computation, we can ensure secure and private voting, encouraging more citizens to participate in governance.
+                <strong>Introduction:</strong> Ensuring secure and private voting is essential for citizen participation in governance.
             </p>
             <p>
                 <strong>Algorithm:</strong> Secure Multi-Party Computation
             </p>
             <p>
-                <strong>Description:</strong> Secure Multi-Party Computation allows multiple parties to jointly compute a function over their inputs while keeping those inputs private.
+                <strong>Description:</strong> This algorithm allows multiple parties to compute a function over their inputs while keeping those inputs private.
             </p>
             <p>
-                <strong>Analysis:</strong> This method provides high security and privacy but requires complex implementation and high computational power.
+                <strong>Analysis:</strong> High security and privacy but complex implementation and requires high computational power.
             </p>
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
 
-            <h4>IT Connectivity and ICT Enabled Services</h4>
+            <h3>IT Connectivity and ICT Enabled Services</h3>
+            <img src="images/it-connectivity.jpg" alt="IT Connectivity">
             <p>
-                <strong>Introduction:</strong> Current IT connectivity and ICT services often face issues with network optimization. Network Flow Algorithms, such as Ford-Fulkerson, can optimize network traffic and connectivity efficiently.
+                <strong>Introduction:</strong> Optimizing network traffic and connectivity is crucial for IT connectivity and ICT enabled services.
             </p>
             <p>
                 <strong>Algorithm:</strong> Network Flow Algorithms (e.g., Ford-Fulkerson)
             </p>
             <p>
-                <strong>Description:</strong> Network Flow Algorithms are used to find the maximum flow in a flow network.
+                <strong>Description:</strong> These algorithms optimize the flow of data through a network.
             </p>
             <p>
-                <strong>Analysis:</strong> These algorithms are efficient in network optimization but face challenges with scalability and handling dynamic changes.
+                <strong>Analysis:</strong> Efficient network optimization but scalability and handling dynamic changes in network traffic can be challenging.
             </p>
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </section>
 
-            <h3>Built Environment</h3>
-            <h4>Mixed-use Development</h4>
+        <section class="use-case">
+            <h2>Built Environment</h2>
+            <h3>Mixed-use Development</h3>
+            <img src="images/mixed-use-development.jpg" alt="Mixed-use Development">
             <p>
-                <strong>Introduction:</strong> Current mixed-use development often lacks optimization. Using Genetic Algorithms can help optimize land use for various purposes like housing, offices, and shops.
+                <strong>Introduction:</strong> Optimizing land use for mixed purposes (housing, offices, shops) can be achieved using Genetic Algorithms.
             </p>
             <p>
                 <strong>Algorithm:</strong> Genetic Algorithm
             </p>
             <p>
-                <strong>Description:</strong> Genetic Algorithms are search heuristics that mimic the process of natural selection to generate high-quality solutions to optimization problems.
+                <strong>Description:</strong> This algorithm mimics the process of natural selection to find optimal solutions.
             </p>
             <p>
-                <strong>Analysis:</strong> Genetic Algorithms offer flexibility and adaptability but require parameter tuning and may converge slowly.
+                <strong>Analysis:</strong> Flexible and adaptable but requires tuning of parameters and may converge slowly.
             </p>
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
 
-            <h4>Compactness and Public Open Space</h4>
+            <h3>Compactness and Public Open Space</h3>
+            <img src="images/compactness-open-space.jpg" alt="Compactness and Public Open Space">
             <p>
-                <strong>Introduction:</strong> Achieving compactness and sufficient public open spaces is challenging. Simulated Annealing can optimize the spatial layout effectively.
+                <strong>Introduction:</strong> Optimizing spatial layout for compactness and open spaces can be achieved using Simulated Annealing.
             </p>
             <p>
                 <strong>Algorithm:</strong> Simulated Annealing
             </p>
             <p>
-                <strong>Description:</strong> Simulated Annealing is a probabilistic technique for approximating the global optimum of a given function.
+                <strong>Description:</strong> This algorithm searches for a good approximation to the global optimum in a large search space.
             </p>
             <p>
-                <strong>Analysis:</strong> This method is suitable for large, complex problems but may require many iterations to find an optimal solution.
+                <strong>Analysis:</strong> Good for large, complex optimization problems but may require many iterations to find an optimal solution.
             </p>
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
 
-            <h4>Housing and Inclusiveness</h4>
+            <h3>Housing and Inclusiveness</h3>
+            <img src="images/housing-inclusiveness.jpg" alt="Housing and Inclusiveness">
             <p>
-                <strong>Introduction:</strong> Efficient housing resource allocation is crucial. Dynamic Programming, like the Subset Sum Problem, can allocate housing resources effectively.
+                <strong>Introduction:</strong> Allocating housing resources efficiently can be achieved using Dynamic Programming.
             </p>
             <p>
                 <strong>Algorithm:</strong> Dynamic Programming (e.g., Subset Sum Problem)
             </p>
             <p>
-                <strong>Description:</strong> Dynamic Programming is a method for solving complex problems by breaking them down into simpler subproblems.
+                <strong>Description:</strong> This algorithm solves problems by breaking them down into simpler subproblems.
             </p>
             <p>
-                <strong>Analysis:</strong> This method provides optimal solutions but can have high memory usage for large datasets.
+                <strong>Analysis:</strong> Provides optimal solutions but has high memory usage for large datasets.
             </p>
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </section>
 
-            <h3>Social Aspects</h3>
-            <h4>Education</h4>
+        <section class="use-case">
+            <h2>Social Aspects</h2>
+            <h3>Education</h3>
+            <img src="images/education.jpg" alt="Education">
             <p>
-                <strong>Introduction:</strong> Efficient assignment of educational resources is critical. The Assignment Problem, solved using Dynamic Programming, ensures optimal resource allocation.
+                <strong>Introduction:</strong> Assigning educational resources efficiently can be achieved using the Assignment Problem algorithm.
             </p>
             <p>
                 <strong>Algorithm:</strong> Assignment Problem (Dynamic Programming)
             </p>
             <p>
-                <strong>Description:</strong> The Assignment Problem involves assigning resources to tasks in the most effective way.
+                <strong>Description:</strong> This algorithm finds the optimal assignment of resources to tasks.
             </p>
             <p>
-                <strong>Analysis:</strong> This method finds optimal assignments but complexity increases with the number of resources and constraints.
+                <strong>Analysis:</strong> Finds optimal assignments but complexity increases with the number of resources and constraints.
             </p>
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
 
-            <h4>Health</h4>
+            <h3>Health</h3>
+            <img src="images/health.jpg" alt="Health">
             <p>
-                <strong>Introduction:</strong> Optimizing the placement of healthcare facilities is essential. The k-D Tree algorithm can efficiently handle spatial queries and nearest neighbor searches.
+                <strong>Introduction:</strong> Optimizing the placement of healthcare facilities can be achieved using k-D Trees.
             </p>
             <p>
                 <strong>Algorithm:</strong> k-D Tree
             </p>
             <p>
-                <strong>Description:</strong> A k-D Tree is a space-partitioning data structure for organizing points in a k-dimensional space.
+                <strong>Description:</strong> This algorithm is used for organizing points in a k-dimensional space.
             </p>
             <p>
-                <strong>Analysis:</strong> This method is efficient for spatial queries but performance may degrade with high-dimensional data.
+                <strong>Analysis:</strong> Efficient spatial queries and nearest neighbor searches but performance may degrade with high-dimensional data.
             </p>
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
 
-            <h4>Safety and Security</h4>
+            <h3>Safety and Security</h3>
+            <img src="images/safety-security.jpg" alt="Safety and Security">
             <p>
-                <strong>Introduction:</strong> Ensuring public safety and security is a priority. The A* Search algorithm can find the shortest path for emergency responses efficiently.
+                <strong>Introduction:</strong> Finding the shortest path for emergency response can be achieved using A* Search.
             </p>
             <p>
                 <strong>Algorithm:</strong> A* Search
             </p>
             <p>
-                <strong>Description:</strong> A* Search is a pathfinding and graph traversal algorithm that is often used in many fields of computer science due to its completeness, optimality, and optimal efficiency.
+                <strong>Description:</strong> This algorithm finds the shortest path to a target node using heuristics.
             </p>
             <p>
-                <strong>Analysis:</strong> This method finds the shortest path efficiently but requires accurate heuristics to be effective.
+                <strong>Analysis:</strong> Efficiently finds the shortest path but requires accurate heuristics to be effective.
             </p>
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </section>
 
-            <h3>Culture and Economy</h3>
-            <h4>Identity and Culture</h4>
+        <section class="use-case">
+            <h2>Culture and Economy</h2>
+            <h3>Identity and Culture</h3>
+            <img src="images/identity-culture.jpg" alt="Identity and Culture">
             <p>
-                <strong>Introduction:</strong> Promoting the unique identity and culture of a city can be enhanced using Content-Based Filtering to recommend cultural events and heritage sites.
+                <strong>Introduction:</strong> Recommending cultural events and heritage sites can be improved using Content-Based Filtering.
             </p>
             <p>
                 <strong>Algorithm:</strong> Content-Based Filtering
             </p>
             <p>
-                <strong>Description:</strong> Content-Based Filtering recommends items based on the attributes of the items themselves and a profile of the user's preferences.
+                <strong>Description:</strong> This algorithm recommends items based on user preferences and characteristics.
             </p>
             <p>
-                <strong>Analysis:</strong> This method provides personalization but requires large datasets for training and may face cold start problems.
+                <strong>Analysis:</strong> Provides personalized recommendations but requires large datasets for training and may face cold start problems.
             </p>
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
 
-            <h4>Economy and Employment</h4>
+            <h3>Economy and Employment</h3>
+            <img src="images/economy-employment.jpg" alt="Economy and Employment">
             <p>
-                <strong>Introduction:</strong> Matching job seekers with job openings efficiently can be achieved using the Bipartite Matching algorithm.
+                <strong>Introduction:</strong> Matching job seekers with job openings can be improved using Bipartite Matching.
             </p>
             <p>
                 <strong>Algorithm:</strong> Bipartite Matching
             </p>
             <p>
-                <strong>Description:</strong> Bipartite Matching involves finding a matching in a bipartite graph, which divides the graph's vertices into two disjoint sets and ensures that each edge connects a vertex in one set to a vertex in the other set.
+                <strong>Description:</strong> This algorithm efficiently matches elements of two disjoint sets.
             </p>
             <p>
-                <strong>Analysis:</strong> This method is efficient but handling preferences and constraints can be complex.
+                <strong>Analysis:</strong> Efficient matching in polynomial time but handling preferences and constraints can be complex.
             </p>
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </section>
 
-            <h3>Urban Environment</h3>
-            <h4>Reduced Pollution</h4>
+        <section class="use-case">
+            <h2>Urban Environment</h2>
+            <h3>Reduced Pollution</h3>
+            <img src="images/reduced-pollution.jpg" alt="Reduced Pollution">
             <p>
-                <strong>Introduction:</strong> Predicting pollution levels and identifying contributing factors can be improved using Decision Trees.
+                <strong>Introduction:</strong> Predicting pollution levels and identifying contributing factors can be achieved using Decision Trees.
             </p>
             <p>
                 <strong>Algorithm:</strong> Decision Trees
             </p>
             <p>
-                <strong>Description:</strong> Decision Trees are a decision support tool that uses a tree-like model of decisions and their possible consequences.
+                <strong>Description:</strong> This algorithm uses a tree-like model for decision making.
             </p>
             <p>
-                <strong>Analysis:</strong> This method is easy to interpret and implement but may overfit with noisy data and requires pruning.
+                <strong>Analysis:</strong> Easy to interpret and implement but may overfit with noisy data and requires pruning.
             </p>
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </section>
 
-            <h3>Transportation and Mobility</h3>
-            <h4>Public Transportation</h4>
+        <section class="use-case">
+            <h2>Transportation and Mobility</h2>
+            <h3>Public Transportation</h3>
+            <img src="images/public-transportation.jpg" alt="Public Transportation">
             <p>
-                <strong>Introduction:</strong> Finding the shortest paths in transportation networks can be optimized using Dijkstra’s Algorithm.
+                <strong>Introduction:</strong> Finding the shortest paths in transportation networks can be achieved using Dijkstra’s Algorithm.
             </p>
             <p>
                 <strong>Algorithm:</strong> Dijkstra’s Algorithm
             </p>
             <p>
-                <strong>Description:</strong> Dijkstra's Algorithm finds the shortest paths between nodes in a graph, which may represent, for example, road networks.
+                <strong>Description:</strong> This algorithm finds the shortest path between nodes in a graph.
             </p>
             <p>
-                <strong>Analysis:</strong> This method is efficient for graphs with non-negative weights but may be slower for very large graphs.
+                <strong>Analysis:</strong> Efficient for graphs with non-negative weights but may be slower for very large graphs.
             </p>
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
 
-            <h4>Walkability</h4>
+            <h3>Walkability</h3>
+            <img src="images/walkability.jpg" alt="Walkability">
             <p>
-                <strong>Introduction:</strong> Evaluating walkability can be improved using the Floyd-Warshall Algorithm, which finds the shortest paths between all pairs of nodes.
+                <strong>Introduction:</strong> Finding shortest paths between all pairs of nodes (e.g., walkability scores) can be achieved using the Floyd-Warshall Algorithm.
             </p>
             <p>
                 <strong>Algorithm:</strong> Floyd-Warshall Algorithm
             </p>
             <p>
-                <strong>Description:</strong> The Floyd-Warshall Algorithm finds shortest paths in a weighted graph with positive or negative edge weights (but with no negative cycles).
+                <strong>Description:</strong> This algorithm finds shortest paths in a weighted graph with positive or negative edge weights.
             </p>
             <p>
-                <strong>Analysis:</strong> This method provides comprehensive shortest path information but has high time complexity (O(n^3)) for large graphs.
+                <strong>Analysis:</strong> Provides comprehensive shortest path information but has high time complexity (O(n^3)) for large graphs.
             </p>
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </section>
 
-            <h3>Water and Sanitation</h3>
-            <h4>Water Supply and Management</h4>
+        <section class="use-case">
+            <h2>Water and Sanitation</h2>
+            <h3>Water Supply and Management</h3>
+            <img src="images/water-supply.jpg" alt="Water Supply and Management">
             <p>
                 <strong>Introduction:</strong> Maximizing flow in water distribution networks can be achieved using the Ford-Fulkerson Algorithm.
             </p>
@@ -235,31 +303,30 @@
                 <strong>Algorithm:</strong> Ford-Fulkerson Algorithm
             </p>
             <p>
-                <strong>Description:</strong> The Ford-Fulkerson Algorithm computes the maximum flow in a flow network.
+                <strong>Description:</strong> This algorithm finds the maximum flow in a flow network.
             </p>
             <p>
-                <strong>Analysis:</strong> This method finds maximum flow efficiently but requires multiple iterations and can be slow for large networks.
+                <strong>Analysis:</strong> Finds maximum flow efficiently but requires multiple iterations and can be slow for large networks.
             </p>
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
 
-            <h4>Sanitation and Waste Management</h4>
+            <h3>Sanitation and Waste Management</h3>
+            <img src="images/waste-management.jpg" alt="Sanitation and Waste Management">
             <p>
-                <strong>Introduction:</strong> Optimizing routes for waste collection can be achieved using Dynamic Programming for the Traveling Salesman Problem.
+                <strong>Introduction:</strong> Optimizing routes for waste collection can be achieved using Dynamic Programming.
             </p>
             <p>
                 <strong>Algorithm:</strong> Dynamic Programming (e.g., Traveling Salesman Problem)
             </p>
             <p>
-                <strong>Description:</strong> Dynamic Programming is used to solve the Traveling Salesman Problem by finding the shortest possible route that visits each city and returns to the origin city.
+                <strong>Description:</strong> This algorithm finds the optimal route for visiting a set of locations and returning to the start.
             </p>
             <p>
-                <strong>Analysis:</strong> This method finds optimal routes under given constraints but has high computational complexity for large datasets.
+                <strong>Analysis:</strong> Finds optimal routes under given constraints but has high computational complexity for large datasets.
             </p>
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
-
         </section>
     </main>
-
     <footer>
         <p>&copy; 2024 Shreyas H Dabade</p>
     </footer>
