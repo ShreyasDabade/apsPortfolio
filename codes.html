@@ -26,23 +26,12 @@
             line-height: 1.8;
             color: #34495e;
         }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
+        .code-link {
+            color: #0066cc;
             text-decoration: none;
-            padding: 10px;
-            transition: background-color 0.3s;
         }
-        nav ul li a:hover {
-            background-color: #444;
+        .code-link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -53,7 +42,7 @@
             <div class="absolute inset-0 flex flex-col justify-center items-center z-10">
                 <h1 class="text-4xl font-bold">Smart City Planning Portfolio</h1>
                 <nav>
-                    <ul>
+                    <ul class="flex space-x-6">
                         <li><a href="index.html" class="text-white hover:text-yellow-300 transition-colors">Home</a></li>
                         <li><a href="objectives.html" class="text-white hover:text-yellow-300 transition-colors">Objectives</a></li>
                         <li><a href="use-cases.html" class="text-white hover:text-yellow-300 transition-colors">Use Cases</a></li>
@@ -67,13 +56,13 @@
     </header>
 
     <main class="container mx-auto py-12 px-6">
-        <section id="codes" class="bg-white p-8 rounded-lg shadow-lg mb-12">
+        <section id="codes" class="bg-white p-8 rounded-lg shadow-lg">
             <h2 class="section-header">Codes</h2>
             <div class="section-content">
                 <p>Here you can find links to the relevant codes for each business case:</p>
-                <ul class="list-disc pl-6">
-                    <li><a href="https://github.com/Supreethsk05/traffic-management" target="_blank" class="text-blue-500 hover:underline">Traffic Management Code</a></li>
-                    <li><a href="https://github.com/Supreethsk05/waste-management" target="_blank" class="text-blue-500 hover:underline">Waste Management Code</a></li>
+                <ul class="list-disc list-inside">
+                    <li><a href="https://github.com/Supreethsk05/traffic-management" target="_blank" class="code-link">Traffic Management Code</a></li>
+                    <li><a href="https://github.com/Supreethsk05/waste-management" target="_blank" class="code-link">Waste Management Code</a></li>
                     <!-- Add more links for other codes -->
                 </ul>
             </div>
