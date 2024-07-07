@@ -4,37 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codes - Smart City Planning Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .header-bg {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .header-image {
+            opacity: 0.5;
+        }
+        .section-header {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        .section-content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #34495e;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #444;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Smart City Planning Portfolio</h1>
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="use-cases.html">Use Cases</a></li>
-        <li><a href="codes.html">Codes</a></li>
-        <li><a href="performance-analysis.html">Performance Analysis</a></li>
-        <li><a href="objectives.html">Objectives</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
+<body class="bg-gray-50">
+    <header class="relative bg-gradient-to-r from-green-700 to-teal-700 text-white py-6 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center relative header-bg">
+            <img src="ss.png" alt="Header Image" class="header-image">
+            <div class="absolute inset-0 flex flex-col justify-center items-center z-10">
+                <h1 class="text-4xl font-bold">Smart City Planning Portfolio</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="text-white hover:text-yellow-300 transition-colors">Home</a></li>
+                        <li><a href="objectives.html" class="text-white hover:text-yellow-300 transition-colors">Objectives</a></li>
+                        <li><a href="use-cases.html" class="text-white hover:text-yellow-300 transition-colors">Use Cases</a></li>
+                        <li><a href="codes.html" class="text-white hover:text-yellow-300 transition-colors">Codes</a></li>
+                        <li><a href="performance-analysis.html" class="text-white hover:text-yellow-300 transition-colors">Performance Analysis</a></li>
+                        <li><a href="references.html" class="text-white hover:text-yellow-300 transition-colors">References</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section id="codes">
-            <h2>Codes</h2>
-            <p>Here you can find links to the relevant codes for each business case.</p>
-            <ul>
-                <li><a href="https://github.com/Supreethsk05/traffic-management" target="_blank">Traffic Management Code</a></li>
-                <li><a href="https://github.com/Supreethsk05/waste-management" target="_blank">Waste Management Code</a></li>
-                <!-- Add more links for other codes -->
-            </ul>
+    <main class="container mx-auto py-12 px-6">
+        <section id="codes" class="bg-white p-8 rounded-lg shadow-lg mb-12">
+            <h2 class="section-header">Codes</h2>
+            <div class="section-content">
+                <p>Here you can find links to the relevant codes for each business case:</p>
+                <ul class="list-disc pl-6">
+                    <li><a href="https://github.com/Supreethsk05/traffic-management" target="_blank" class="text-blue-500 hover:underline">Traffic Management Code</a></li>
+                    <li><a href="https://github.com/Supreethsk05/waste-management" target="_blank" class="text-blue-500 hover:underline">Waste Management Code</a></li>
+                    <!-- Add more links for other codes -->
+                </ul>
+            </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="bg-gradient-to-r from-green-700 to-teal-700 text-white text-center py-6 shadow-lg mt-12">
         <p>&copy; 2024 Shreyas H Dabade</p>
     </footer>
 </body>
