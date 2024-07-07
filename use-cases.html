@@ -463,6 +463,25 @@
         function closeModal(id) {
             document.getElementById(id + '-modal').style.display = 'none';
         }
+ function loadSection(event, sectionId) {
+            event.preventDefault();
+            const url = event.target.href.split('#')[0];
+
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(data, 'text/html');
+                    const section = doc.getElementById(sectionId);
+                    if (section) {
+                        document.getElementById('content').innerHTML = section.innerHTML;
+                    } else {
+                        document.getElementById('content').innerHTML = 'Section not found.';
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+        
     </script>
 </body>
 </html>
