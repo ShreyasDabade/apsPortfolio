@@ -51,16 +51,42 @@
         .use-case-box:hover {
             transform: scale(1.05);
         }
-        .use-case-detail {
+        .modal {
             display: none;
-            background-color: #ecf0f1;
-            padding: 20px;
-            margin: 10px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+            background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
-        .use-case-box.active + .use-case-detail {
-            display: block;
+        .modal-content {
+            padding: 20px;
+        }
+        .modal-header {
+            background-color: #34495e;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        .modal-close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+        }
+        .modal-close:hover {
+            color: #f00;
         }
     </style>
 </head>
@@ -88,198 +114,94 @@
         <section class="use-case">
             <h2 class="section-header">Governance</h2>
             <div class="section-content flex">
-                <div class="use-case-box" onclick="toggleDetails('citizen-participation')">
+                <div class="use-case-box" onclick="openModal('citizen-participation')">
                     <img src="citizen_participation.webp" alt="Citizen Participation">
                     <p>Citizen Participation</p>
                 </div>
-                <div class="use-case-box" onclick="toggleDetails('it-connectivity')">
+                <div class="use-case-box" onclick="openModal('it-connectivity')">
                     <img src="it_connectivity.webp" alt="IT Connectivity and ICT Enabled Services">
                     <p>IT Connectivity and ICT Enabled Services</p>
                 </div>
-            </div>
-            <div id="citizen-participation" class="use-case-detail">
-                <h3>Citizen Participation</h3>
-                <p><strong>Introduction:</strong> Ensuring secure and private voting is essential for citizen participation in governance.</p>
-                <p><strong>Algorithm:</strong> Secure Multi-Party Computation</p>
-                <p><strong>Description:</strong> This algorithm allows multiple parties to compute a function over their inputs while keeping those inputs private.</p>
-                <p><strong>Analysis:</strong> High security and privacy but complex implementation and requires high computational power.</p>
-                <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
-            </div>
-            <div id="it-connectivity" class="use-case-detail">
-                <h3>IT Connectivity and ICT Enabled Services</h3>
-                <p><strong>Introduction:</strong> Optimizing network traffic and connectivity is crucial for IT connectivity and ICT enabled services.</p>
-                <p><strong>Algorithm:</strong> Network Flow Algorithms (e.g., Ford-Fulkerson)</p>
-                <p><strong>Description:</strong> These algorithms optimize the flow of data through a network.</p>
-                <p><strong>Analysis:</strong> Efficient network optimization but scalability and handling dynamic changes in network traffic can be challenging.</p>
-                <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
             </div>
         </section>
 
         <section class="use-case">
             <h2 class="section-header">Built Environment</h2>
             <div class="section-content flex">
-                <div class="use-case-box" onclick="toggleDetails('mixed-use-development')">
+                <div class="use-case-box" onclick="openModal('mixed-use-development')">
                     <img src="mixed_use_development.png" alt="Mixed-use Development">
                     <p>Mixed-use Development</p>
                 </div>
-                <div class="use-case-box" onclick="toggleDetails('compactness')">
+                <div class="use-case-box" onclick="openModal('compactness')">
                     <img src="compactness.png" alt="Compactness and Public Open Space">
                     <p>Compactness and Public Open Space</p>
                 </div>
-            </div>
-            <div id="mixed-use-development" class="use-case-detail">
-                <h3>Mixed-use Development</h3>
-                <p><strong>Introduction:</strong> Optimizing land use for mixed purposes (housing, offices, shops) can be achieved using Genetic Algorithms.</p>
-                <p><strong>Algorithm:</strong> Genetic Algorithm</p>
-                <p><strong>Description:</strong> This algorithm mimics the process of natural selection to find optimal solutions.</p>
-                <p><strong>Analysis:</strong> Flexible and adaptable but requires tuning of parameters and may converge slowly.</p>
-                <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
-            </div>
-            <div id="compactness" class="use-case-detail">
-                <h3>Compactness and Public Open Space</h3>
-                <p><strong>Introduction:</strong> Optimizing spatial layout for compactness and open spaces can be achieved using Simulated Annealing.</p>
-                <p><strong>Algorithm:</strong> Simulated Annealing</p>
-                <p><strong>Description:</strong> This algorithm searches for a good approximation to the global optimum in a large search space.</p>
-                <p><strong>Analysis:</strong> Good for large, complex optimization problems but may require many iterations to find an optimal solution.</p>
-                <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
             </div>
         </section>
 
         <section class="use-case">
             <h2 class="section-header">Social Aspects</h2>
             <div class="section-content flex">
-                <div class="use-case-box" onclick="toggleDetails('education')">
+                <div class="use-case-box" onclick="openModal('education')">
                     <img src="education.jpg" alt="Education">
                     <p>Education</p>
                 </div>
-                <div class="use-case-box" onclick="toggleDetails('health')">
+                <div class="use-case-box" onclick="openModal('health')">
                     <img src="health.jpg" alt="Health">
                     <p>Health</p>
                 </div>
-            </div>
-            <div id="education" class="use-case-detail">
-                <h3>Education</h3>
-                <p><strong>Introduction:</strong> Assigning educational resources efficiently can be achieved using the Assignment Problem algorithm.</p>
-                <p><strong>Algorithm:</strong> Assignment Problem (Dynamic Programming)</p>
-                <p><strong>Description:</strong> This algorithm finds the optimal assignment of resources to tasks.</p>
-                <p><strong>Analysis:</strong> Finds optimal assignments but complexity increases with the number of resources and constraints.</p>
-                <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
-            </div>
-            <div id="health" class="use-case-detail">
-                <h3>Health</h3>
-                <p><strong>Introduction:</strong> Optimizing the placement of healthcare facilities can be achieved using k-D Trees.</p>
-                <p><strong>Algorithm:</strong> k-D Tree</p>
-                <p><strong>Description:</strong> This algorithm is used for organizing points in a k-dimensional space.</p>
-                <p><strong>Analysis:</strong> Efficient spatial queries and nearest neighbor searches but performance may degrade with high-dimensional data.</p>
-                <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
             </div>
         </section>
 
         <section class="use-case">
             <h2 class="section-header">Culture and Economy</h2>
             <div class="section-content flex">
-                <div class="use-case-box" onclick="toggleDetails('identity-and-culture')">
+                <div class="use-case-box" onclick="openModal('identity-and-culture')">
                     <img src="identity_and.jpg" alt="Identity and Culture">
                     <p>Identity and Culture</p>
                 </div>
-                <div class="use-case-box" onclick="toggleDetails('economy-and-employment')">
+                <div class="use-case-box" onclick="openModal('economy-and-employment')">
                     <img src="employment.webp" alt="Economy and Employment">
                     <p>Economy and Employment</p>
                 </div>
-            </div>
-            <div id="identity-and-culture" class="use-case-detail">
-                <h3>Identity and Culture</h3>
-                <p><strong>Introduction:</strong> Recommending cultural events and heritage sites can be improved using Content-Based Filtering.</p>
-                <p><strong>Algorithm:</strong> Content-Based Filtering</p>
-                <p><strong>Description:</strong> This algorithm recommends items based on user preferences and characteristics.</p>
-                <p><strong>Analysis:</strong> Provides personalized recommendations but requires large datasets for training and may face cold start problems.</p>
-                <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
-            </div>
-            <div id="economy-and-employment" class="use-case-detail">
-                <h3>Economy and Employment</h3>
-                <p><strong>Introduction:</strong> Matching job seekers with job openings can be improved using Bipartite Matching.</p>
-                <p><strong>Algorithm:</strong> Bipartite Matching</p>
-                <p><strong>Description:</strong> This algorithm efficiently matches elements of two disjoint sets.</p>
-                <p><strong>Analysis:</strong> Efficient matching in polynomial time but handling preferences and constraints can be complex.</p>
-                <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
             </div>
         </section>
 
         <section class="use-case">
             <h2 class="section-header">Urban Environment</h2>
             <div class="section-content flex">
-                <div class="use-case-box" onclick="toggleDetails('reduced-pollution')">
+                <div class="use-case-box" onclick="openModal('reduced-pollution')">
                     <img src="reduced_pollution.webp" alt="Reduced Pollution">
                     <p>Reduced Pollution</p>
                 </div>
-            </div>
-            <div id="reduced-pollution" class="use-case-detail">
-                <h3>Reduced Pollution</h3>
-                <p><strong>Introduction:</strong> Predicting pollution levels and identifying contributing factors can be achieved using Decision Trees.</p>
-                <p><strong>Algorithm:</strong> Decision Trees</p>
-                <p><strong>Description:</strong> This algorithm uses a tree-like model for decision making.</p>
-                <p><strong>Analysis:</strong> Easy to interpret and implement but may overfit with noisy data and requires pruning.</p>
-                <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
             </div>
         </section>
 
         <section class="use-case">
             <h2 class="section-header">Transportation and Mobility</h2>
             <div class="section-content flex">
-                <div class="use-case-box" onclick="toggleDetails('public-transportation')">
+                <div class="use-case-box" onclick="openModal('public-transportation')">
                     <img src="public_transportation.jpg" alt="Public Transportation">
                     <p>Public Transportation</p>
                 </div>
-                <div class="use-case-box" onclick="toggleDetails('walkability')">
+                <div class="use-case-box" onclick="openModal('walkability')">
                     <img src="walkability.jpg" alt="Walkability">
                     <p>Walkability</p>
                 </div>
-            </div>
-            <div id="public-transportation" class="use-case-detail">
-                <h3>Public Transportation</h3>
-                <p><strong>Introduction:</strong> Finding the shortest paths in transportation networks can be achieved using Dijkstra’s Algorithm.</p>
-                <p><strong>Algorithm:</strong> Dijkstra’s Algorithm</p>
-                <p><strong>Description:</strong> This algorithm finds the shortest path between nodes in a graph.</p>
-                <p><strong>Analysis:</strong> Efficient for graphs with non-negative weights but may be slower for very large graphs.</p>
-                <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
-            </div>
-            <div id="walkability" class="use-case-detail">
-                <h3>Walkability</h3>
-                <p><strong>Introduction:</strong> Finding shortest paths between all pairs of nodes (e.g., walkability scores) can be achieved using the Floyd-Warshall Algorithm.</p>
-                <p><strong>Algorithm:</strong> Floyd-Warshall Algorithm</p>
-                <p><strong>Description:</strong> This algorithm finds shortest paths in a weighted graph with positive or negative edge weights.</p>
-                <p><strong>Analysis:</strong> Provides comprehensive shortest path information but has high time complexity (O(n^3)) for large graphs.</p>
-                <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
             </div>
         </section>
 
         <section class="use-case">
             <h2 class="section-header">Water and Sanitation</h2>
             <div class="section-content flex">
-                <div class="use-case-box" onclick="toggleDetails('water-supply')">
+                <div class="use-case-box" onclick="openModal('water-supply')">
                     <img src="water_management.jpg" alt="Water Supply and Management">
                     <p>Water Supply and Management</p>
                 </div>
-                <div class="use-case-box" onclick="toggleDetails('sanitation')">
+                <div class="use-case-box" onclick="openModal('sanitation')">
                     <img src="waste_management.jpg" alt="Sanitation and Waste Management">
                     <p>Sanitation and Waste Management</p>
                 </div>
-            </div>
-            <div id="water-supply" class="use-case-detail">
-                <h3>Water Supply and Management</h3>
-                <p><strong>Introduction:</strong> Maximizing flow in water distribution networks can be achieved using the Ford-Fulkerson Algorithm.</p>
-                <p><strong>Algorithm:</strong> Ford-Fulkerson Algorithm</p>
-                <p><strong>Description:</strong> This algorithm finds the maximum flow in a flow network.</p>
-                <p><strong>Analysis:</strong> Finds maximum flow efficiently but requires multiple iterations and can be slow for large networks.</p>
-                <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
-            </div>
-            <div id="sanitation" class="use-case-detail">
-                <h3>Sanitation and Waste Management</h3>
-                <p><strong>Introduction:</strong> Optimizing routes for waste collection can be achieved using Dynamic Programming.</p>
-                <p><strong>Algorithm:</strong> Dynamic Programming (e.g., Traveling Salesman Problem)</p>
-                <p><strong>Description:</strong> This algorithm finds the optimal route for visiting a set of locations and returning to the start.</p>
-                <p><strong>Analysis:</strong> Finds optimal routes under given constraints but has high computational complexity for large datasets.</p>
-                <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
             </div>
         </section>
     </main>
@@ -287,23 +209,196 @@
         <p>&copy; 2024 Shreyas H Dabade</p>
     </footer>
 
+    <!-- Modals -->
+    <div id="citizen-participation-modal" class="modal">
+        <div class="modal-header">
+            Citizen Participation
+            <button class="modal-close" onclick="closeModal('citizen-participation')">&times;</button>
+        </div>
+        <div class="modal-content">
+            <p><strong>Introduction:</strong> Ensuring secure and private voting is essential for citizen participation in governance.</p>
+            <p><strong>Algorithm:</strong> Secure Multi-Party Computation</p>
+            <p><strong>Description:</strong> This algorithm allows multiple parties to compute a function over their inputs while keeping those inputs private.</p>
+            <p><strong>Analysis:</strong> High security and privacy but complex implementation and requires high computational power.</p>
+            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </div>
+    </div>
+
+    <div id="it-connectivity-modal" class="modal">
+        <div class="modal-header">
+            IT Connectivity and ICT Enabled Services
+            <button class="modal-close" onclick="closeModal('it-connectivity')">&times;</button>
+        </div>
+        <div class="modal-content">
+            <p><strong>Introduction:</strong> Optimizing network traffic and connectivity is crucial for IT connectivity and ICT enabled services.</p>
+            <p><strong>Algorithm:</strong> Network Flow Algorithms (e.g., Ford-Fulkerson)</p>
+            <p><strong>Description:</strong> These algorithms optimize the flow of data through a network.</p>
+            <p><strong>Analysis:</strong> Efficient network optimization but scalability and handling dynamic changes in network traffic can be challenging.</p>
+            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </div>
+    </div>
+
+    <div id="mixed-use-development-modal" class="modal">
+        <div class="modal-header">
+            Mixed-use Development
+            <button class="modal-close" onclick="closeModal('mixed-use-development')">&times;</button>
+        </div>
+        <div class="modal-content">
+            <p><strong>Introduction:</strong> Optimizing land use for mixed purposes (housing, offices, shops) can be achieved using Genetic Algorithms.</p>
+            <p><strong>Algorithm:</strong> Genetic Algorithm</p>
+            <p><strong>Description:</strong> This algorithm mimics the process of natural selection to find optimal solutions.</p>
+            <p><strong>Analysis:</strong> Flexible and adaptable but requires tuning of parameters and may converge slowly.</p>
+            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </div>
+    </div>
+
+    <div id="compactness-modal" class="modal">
+        <div class="modal-header">
+            Compactness and Public Open Space
+            <button class="modal-close" onclick="closeModal('compactness')">&times;</button>
+        </div>
+        <div class="modal-content">
+            <p><strong>Introduction:</strong> Optimizing spatial layout for compactness and open spaces can be achieved using Simulated Annealing.</p>
+            <p><strong>Algorithm:</strong> Simulated Annealing</p>
+            <p><strong>Description:</strong> This algorithm searches for a good approximation to the global optimum in a large search space.</p>
+            <p><strong>Analysis:</strong> Good for large, complex optimization problems but may require many iterations to find an optimal solution.</p>
+            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </div>
+    </div>
+
+    <div id="education-modal" class="modal">
+        <div class="modal-header">
+            Education
+            <button class="modal-close" onclick="closeModal('education')">&times;</button>
+        </div>
+        <div class="modal-content">
+            <p><strong>Introduction:</strong> Assigning educational resources efficiently can be achieved using the Assignment Problem algorithm.</p>
+            <p><strong>Algorithm:</strong> Assignment Problem (Dynamic Programming)</p>
+            <p><strong>Description:</strong> This algorithm finds the optimal assignment of resources to tasks.</p>
+            <p><strong>Analysis:</strong> Finds optimal assignments but complexity increases with the number of resources and constraints.</p>
+            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </div>
+    </div>
+
+    <div id="health-modal" class="modal">
+        <div class="modal-header">
+            Health
+            <button class="modal-close" onclick="closeModal('health')">&times;</button>
+        </div>
+        <div class="modal-content">
+            <p><strong>Introduction:</strong> Optimizing the placement of healthcare facilities can be achieved using k-D Trees.</p>
+            <p><strong>Algorithm:</strong> k-D Tree</p>
+            <p><strong>Description:</strong> This algorithm is used for organizing points in a k-dimensional space.</p>
+            <p><strong>Analysis:</strong> Efficient spatial queries and nearest neighbor searches but performance may degrade with high-dimensional data.</p>
+            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </div>
+    </div>
+
+    <div id="identity-and-culture-modal" class="modal">
+        <div class="modal-header">
+            Identity and Culture
+            <button class="modal-close" onclick="closeModal('identity-and-culture')">&times;</button>
+        </div>
+        <div class="modal-content">
+            <p><strong>Introduction:</strong> Recommending cultural events and heritage sites can be improved using Content-Based Filtering.</p>
+            <p><strong>Algorithm:</strong> Content-Based Filtering</p>
+            <p><strong>Description:</strong> This algorithm recommends items based on user preferences and characteristics.</p>
+            <p><strong>Analysis:</strong> Provides personalized recommendations but requires large datasets for training and may face cold start problems.</p>
+            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </div>
+    </div>
+
+    <div id="economy-and-employment-modal" class="modal">
+        <div class="modal-header">
+            Economy and Employment
+            <button class="modal-close" onclick="closeModal('economy-and-employment')">&times;</button>
+        </div>
+        <div class="modal-content">
+            <p><strong>Introduction:</strong> Matching job seekers with job openings can be improved using Bipartite Matching.</p>
+            <p><strong>Algorithm:</strong> Bipartite Matching</p>
+            <p><strong>Description:</strong> This algorithm efficiently matches elements of two disjoint sets.</p>
+            <p><strong>Analysis:</strong> Efficient matching in polynomial time but handling preferences and constraints can be complex.</p>
+            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </div>
+    </div>
+
+    <div id="reduced-pollution-modal" class="modal">
+        <div class="modal-header">
+            Reduced Pollution
+            <button class="modal-close" onclick="closeModal('reduced-pollution')">&times;</button>
+        </div>
+        <div class="modal-content">
+            <p><strong>Introduction:</strong> Predicting pollution levels and identifying contributing factors can be achieved using Decision Trees.</p>
+            <p><strong>Algorithm:</strong> Decision Trees</p>
+            <p><strong>Description:</strong> This algorithm uses a tree-like model for decision making.</p>
+            <p><strong>Analysis:</strong> Easy to interpret and implement but may overfit with noisy data and requires pruning.</p>
+            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </div>
+    </div>
+
+    <div id="public-transportation-modal" class="modal">
+        <div class="modal-header">
+            Public Transportation
+            <button class="modal-close" onclick="closeModal('public-transportation')">&times;</button>
+        </div>
+        <div class="modal-content">
+            <p><strong>Introduction:</strong> Finding the shortest paths in transportation networks can be achieved using Dijkstra’s Algorithm.</p>
+            <p><strong>Algorithm:</strong> Dijkstra’s Algorithm</p>
+            <p><strong>Description:</strong> This algorithm finds the shortest path between nodes in a graph.</p>
+            <p><strong>Analysis:</strong> Efficient for graphs with non-negative weights but may be slower for very large graphs.</p>
+            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </div>
+    </div>
+
+    <div id="walkability-modal" class="modal">
+        <div class="modal-header">
+            Walkability
+            <button class="modal-close" onclick="closeModal('walkability')">&times;</button>
+        </div>
+        <div class="modal-content">
+            <p><strong>Introduction:</strong> Finding shortest paths between all pairs of nodes (e.g., walkability scores) can be achieved using the Floyd-Warshall Algorithm.</p>
+            <p><strong>Algorithm:</strong> Floyd-Warshall Algorithm</p>
+            <p><strong>Description:</strong> This algorithm finds shortest paths in a weighted graph with positive or negative edge weights.</p>
+            <p><strong>Analysis:</strong> Provides comprehensive shortest path information but has high time complexity (O(n^3)) for large graphs.</p>
+            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </div>
+    </div>
+
+    <div id="water-supply-modal" class="modal">
+        <div class="modal-header">
+            Water Supply and Management
+            <button class="modal-close" onclick="closeModal('water-supply')">&times;</button>
+        </div>
+        <div class="modal-content">
+            <p><strong>Introduction:</strong> Maximizing flow in water distribution networks can be achieved using the Ford-Fulkerson Algorithm.</p>
+            <p><strong>Algorithm:</strong> Ford-Fulkerson Algorithm</p>
+            <p><strong>Description:</strong> This algorithm finds the maximum flow in a flow network.</p>
+            <p><strong>Analysis:</strong> Finds maximum flow efficiently but requires multiple iterations and can be slow for large networks.</p>
+            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </div>
+    </div>
+
+    <div id="sanitation-modal" class="modal">
+        <div class="modal-header">
+            Sanitation and Waste Management
+            <button class="modal-close" onclick="closeModal('sanitation')">&times;</button>
+        </div>
+        <div class="modal-content">
+            <p><strong>Introduction:</strong> Optimizing routes for waste collection can be achieved using Dynamic Programming.</p>
+            <p><strong>Algorithm:</strong> Dynamic Programming (e.g., Traveling Salesman Problem)</p>
+            <p><strong>Description:</strong> This algorithm finds the optimal route for visiting a set of locations and returning to the start.</p>
+            <p><strong>Analysis:</strong> Finds optimal routes under given constraints but has high computational complexity for large datasets.</p>
+            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
+        </div>
+    </div>
+
     <script>
-        function toggleDetails(id) {
-            const detail = document.getElementById(id);
-            const allDetails = document.querySelectorAll('.use-case-detail');
-            allDetails.forEach(d => {
-                if (d.id !== id) {
-                    d.previousElementSibling.classList.remove('active');
-                    d.style.display = 'none';
-                }
-            });
-            if (detail.style.display === 'none' || detail.style.display === '') {
-                detail.previousElementSibling.classList.add('active');
-                detail.style.display = 'block';
-            } else {
-                detail.previousElementSibling.classList.remove('active');
-                detail.style.display = 'none';
-            }
+        function openModal(id) {
+            document.getElementById(id + '-modal').style.display = 'block';
+        }
+
+        function closeModal(id) {
+            document.getElementById(id + '-modal').style.display = 'none';
         }
     </script>
 </body>
