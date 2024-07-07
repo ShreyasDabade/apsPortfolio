@@ -4,40 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Objectives - Smart City Planning Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .header-bg {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .header-image {
+            opacity: 0.5;
+        }
+        .section-header {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        .section-content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #34495e;
+        }
+        .objective-item {
+            display: flex;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+        .objective-item img {
+            width: 40px;
+            height: 40px;
+            margin-right: 1rem;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>Smart City Planning Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="use-cases.html">Use Cases</a></li>
-                <li><a href="codes.html">Codes</a></li>
-                <li><a href="performance-analysis.html">Performance Analysis</a></li>
-                <li><a href="objectives.html">Objectives</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+<body class="bg-gray-50">
+    <header class="relative bg-gradient-to-r from-green-700 to-teal-700 text-white py-6 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center relative header-bg">
+            <img src="images/s.jpg" alt="Header Image" class="header-image">
+            <div class="absolute inset-0 flex flex-col justify-center items-center z-10">
+                <h1 class="text-4xl font-bold">Smart City Planning Portfolio</h1>
+                <nav>
+                    <ul class="flex space-x-6">
+                        <li><a href="index.html" class="text-white hover:text-yellow-300 transition-colors">Home</a></li>
+                        <li><a href="objectives.html" class="text-white hover:text-yellow-300 transition-colors">Objectives</a></li>
+                        <li><a href="use-cases.html" class="text-white hover:text-yellow-300 transition-colors">Use Cases</a></li>
+                        <li><a href="codes.html" class="text-white hover:text-yellow-300 transition-colors">Codes</a></li>
+                        <li><a href="performance-analysis.html" class="text-white hover:text-yellow-300 transition-colors">Performance Analysis</a></li>
+                        <li><a href="contact.html" class="text-white hover:text-yellow-300 transition-colors">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section id="objectives">
-            <h2>Objectives</h2>
-            <p>The objectives of the Smart City Planning Portfolio are:</p>
-            <ul>
-                <li>To promote citizen participation and governance through robust IT connectivity and ICT-enabled government services.</li>
-                <li>To ensure a mixed-use built environment that encourages compactness and provides sufficient public open spaces and housing for all income groups.</li>
-                <li>To offer education and healthcare opportunities for all citizens, ensuring safety and security for everyone.</li>
-                <li>To celebrate and promote the unique identity and culture of the city while fostering a robust and resilient economic base.</li>
-                <li>To maintain reduced pollution levels, increase the use of renewable energy sources, and implement energy-efficient practices.</li>
-                <li>To provide reliable transportation and mobility options that prioritize walkability and accessibility for all.</li>
-                <li>To ensure a reliable water supply and advanced water management, along with effective waste and wastewater management systems.</li>
-            </ul>
+    <main class="container mx-auto py-12 px-6">
+        <section id="objectives" class="bg-white p-8 rounded-lg shadow-lg mb-12">
+            <h2 class="section-header">Objectives</h2>
+            <div class="section-content">
+                <p>The objectives of the Smart City Planning Portfolio are:</p>
+                <ul class="space-y-4">
+                    <li class="objective-item">
+                        <img src="images/icon-participation.png" alt="Participation Icon">
+                        <span>To promote citizen participation and governance through robust IT connectivity and ICT-enabled government services.</span>
+                    </li>
+                    <li class="objective-item">
+                        <img src="images/icon-built-environment.png" alt="Built Environment Icon">
+                        <span>To ensure a mixed-use built environment that encourages compactness and provides sufficient public open spaces and housing for all income groups.</span>
+                    </li>
+                    <li class="objective-item">
+                        <img src="images/icon-education-health.png" alt="Education and Health Icon">
+                        <span>To offer education and healthcare opportunities for all citizens, ensuring safety and security for everyone.</span>
+                    </li>
+                    <li class="objective-item">
+                        <img src="images/icon-culture-economy.png" alt="Culture and Economy Icon">
+                        <span>To celebrate and promote the unique identity and culture of the city while fostering a robust and resilient economic base.</span>
+                    </li>
+                    <li class="objective-item">
+                        <img src="images/icon-environment.png" alt="Environment Icon">
+                        <span>To maintain reduced pollution levels, increase the use of renewable energy sources, and implement energy-efficient practices.</span>
+                    </li>
+                    <li class="objective-item">
+                        <img src="images/icon-transportation.png" alt="Transportation Icon">
+                        <span>To provide reliable transportation and mobility options that prioritize walkability and accessibility for all.</span>
+                    </li>
+                    <li class="objective-item">
+                        <img src="images/icon-water-management.png" alt="Water Management Icon">
+                        <span>To ensure a reliable water supply and advanced water management, along with effective waste and wastewater management systems.</span>
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="bg-gradient-to-r from-green-700 to-teal-700 text-white text-center py-6 shadow-lg mt-12">
         <p>&copy; 2024 Shreyas H Dabade</p>
     </footer>
 </body>
