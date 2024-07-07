@@ -26,13 +26,6 @@
             line-height: 1.8;
             color: #34495e;
         }
-        .use-case {
-            background-color: #ffffff;
-            padding: 20px;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
         .use-case-box {
             background-color: #ecf0f1;
             padding: 10px;
@@ -49,8 +42,8 @@
             align-items: center;
         }
         .use-case-box img {
-            width: 80%;
-            height: 80%;
+            width: 100%;
+            height: 70%;
             object-fit: cover;
             margin-bottom: 10px;
             border-radius: 10px;
@@ -67,22 +60,22 @@
             transform: translate(-50%, -50%);
             width: 90%;
             max-width: 800px;
-            max-height: 90vh;
-            overflow-y: auto;
+            max-height: 90%;
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            overflow-y: auto;
         }
         .modal-content {
             padding: 20px;
         }
         .modal-header {
-            background-color: #3EB489;
+            background-color: #34495e;
             color: white;
             padding: 10px;
             text-align: center;
             font-size: 1.5rem;
+            position: relative;
         }
         .modal-close {
             position: absolute;
@@ -99,8 +92,10 @@
         }
         .highlight-link {
             color: #2980b9;
-            font-weight: bold;
             text-decoration: underline;
+        }
+        .highlight-link:hover {
+            text-decoration: none;
         }
     </style>
 </head>
@@ -129,11 +124,11 @@
             <h2 class="section-header">Governance</h2>
             <div class="section-content flex justify-center">
                 <div class="use-case-box" onclick="openModal('citizen-participation')">
-                    <img src="placeholder.png" alt="Citizen Participation">
+                    <img src="placeholder.jpg" alt="Citizen Participation">
                     <p>Citizen Participation</p>
                 </div>
                 <div class="use-case-box" onclick="openModal('it-connectivity')">
-                    <img src="placeholder.png" alt="IT Connectivity and ICT Enabled Services">
+                    <img src="placeholder.jpg" alt="IT Connectivity and ICT Enabled Services">
                     <p>IT Connectivity and ICT Enabled Services</p>
                 </div>
             </div>
@@ -143,12 +138,16 @@
             <h2 class="section-header">Built Environment</h2>
             <div class="section-content flex justify-center">
                 <div class="use-case-box" onclick="openModal('mixed-use-development')">
-                    <img src="placeholder.png" alt="Mixed-use Development">
+                    <img src="placeholder.jpg" alt="Mixed-use Development">
                     <p>Mixed-use Development</p>
                 </div>
                 <div class="use-case-box" onclick="openModal('compactness')">
-                    <img src="placeholder.png" alt="Compactness and Public Open Space">
+                    <img src="placeholder.jpg" alt="Compactness and Public Open Space">
                     <p>Compactness and Public Open Space</p>
+                </div>
+                <div class="use-case-box" onclick="openModal('housing-inclusiveness')">
+                    <img src="placeholder.jpg" alt="Housing and Inclusiveness">
+                    <p>Housing and Inclusiveness</p>
                 </div>
             </div>
         </section>
@@ -157,12 +156,16 @@
             <h2 class="section-header">Social Aspects</h2>
             <div class="section-content flex justify-center">
                 <div class="use-case-box" onclick="openModal('education')">
-                    <img src="placeholder.png" alt="Education">
+                    <img src="placeholder.jpg" alt="Education">
                     <p>Education</p>
                 </div>
                 <div class="use-case-box" onclick="openModal('health')">
-                    <img src="placeholder.png" alt="Health">
+                    <img src="placeholder.jpg" alt="Health">
                     <p>Health</p>
+                </div>
+                <div class="use-case-box" onclick="openModal('safety-and-security')">
+                    <img src="placeholder.jpg" alt="Safety and Security">
+                    <p>Safety and Security</p>
                 </div>
             </div>
         </section>
@@ -171,11 +174,11 @@
             <h2 class="section-header">Culture and Economy</h2>
             <div class="section-content flex justify-center">
                 <div class="use-case-box" onclick="openModal('identity-and-culture')">
-                    <img src="placeholder.png" alt="Identity and Culture">
+                    <img src="placeholder.jpg" alt="Identity and Culture">
                     <p>Identity and Culture</p>
                 </div>
                 <div class="use-case-box" onclick="openModal('economy-and-employment')">
-                    <img src="placeholder.png" alt="Economy and Employment">
+                    <img src="placeholder.jpg" alt="Economy and Employment">
                     <p>Economy and Employment</p>
                 </div>
             </div>
@@ -185,7 +188,7 @@
             <h2 class="section-header">Urban Environment</h2>
             <div class="section-content flex justify-center">
                 <div class="use-case-box" onclick="openModal('reduced-pollution')">
-                    <img src="placeholder.png" alt="Reduced Pollution">
+                    <img src="placeholder.jpg" alt="Reduced Pollution">
                     <p>Reduced Pollution</p>
                 </div>
             </div>
@@ -195,11 +198,11 @@
             <h2 class="section-header">Transportation and Mobility</h2>
             <div class="section-content flex justify-center">
                 <div class="use-case-box" onclick="openModal('public-transportation')">
-                    <img src="placeholder.png" alt="Public Transportation">
+                    <img src="placeholder.jpg" alt="Public Transportation">
                     <p>Public Transportation</p>
                 </div>
                 <div class="use-case-box" onclick="openModal('walkability')">
-                    <img src="placeholder.png" alt="Walkability">
+                    <img src="placeholder.jpg" alt="Walkability">
                     <p>Walkability</p>
                 </div>
             </div>
@@ -209,11 +212,11 @@
             <h2 class="section-header">Water and Sanitation</h2>
             <div class="section-content flex justify-center">
                 <div class="use-case-box" onclick="openModal('water-supply')">
-                    <img src="placeholder.png" alt="Water Supply and Management">
+                    <img src="placeholder.jpg" alt="Water Supply and Management">
                     <p>Water Supply and Management</p>
                 </div>
                 <div class="use-case-box" onclick="openModal('sanitation')">
-                    <img src="placeholder.png" alt="Sanitation and Waste Management">
+                    <img src="placeholder.jpg" alt="Sanitation and Waste Management">
                     <p>Sanitation and Waste Management</p>
                 </div>
             </div>
@@ -280,6 +283,20 @@
         </div>
     </div>
 
+    <div id="housing-inclusiveness-modal" class="modal">
+        <div class="modal-header">
+            Housing and Inclusiveness
+            <button class="modal-close" onclick="closeModal('housing-inclusiveness')">&times;</button>
+        </div>
+        <div class="modal-content">
+            <p><strong>Introduction:</strong> Allocating housing resources efficiently can be achieved using Dynamic Programming.</p>
+            <p><strong>Algorithm:</strong> Dynamic Programming (e.g., Subset Sum Problem)</p>
+            <p><strong>Description:</strong> This algorithm solves problems by breaking them down into simpler subproblems.</p>
+            <p><strong>Analysis:</strong> Provides optimal solutions but has high memory usage for large datasets.</p>
+            <p><a href="codes.html" class="highlight-link">View Code</a> | <a href="performance-analysis.html" class="highlight-link">View Analysis</a></p>
+        </div>
+    </div>
+
     <div id="education-modal" class="modal">
         <div class="modal-header">
             Education
@@ -304,6 +321,20 @@
             <p><strong>Algorithm:</strong> k-D Tree</p>
             <p><strong>Description:</strong> This algorithm is used for organizing points in a k-dimensional space.</p>
             <p><strong>Analysis:</strong> Efficient spatial queries and nearest neighbor searches but performance may degrade with high-dimensional data.</p>
+            <p><a href="codes.html" class="highlight-link">View Code</a> | <a href="performance-analysis.html" class="highlight-link">View Analysis</a></p>
+        </div>
+    </div>
+
+    <div id="safety-and-security-modal" class="modal">
+        <div class="modal-header">
+            Safety and Security
+            <button class="modal-close" onclick="closeModal('safety-and-security')">&times;</button>
+        </div>
+        <div class="modal-content">
+            <p><strong>Introduction:</strong> Finding the shortest path for emergency response can be achieved using A* Search.</p>
+            <p><strong>Algorithm:</strong> A* Search</p>
+            <p><strong>Description:</strong> This algorithm finds the shortest path to a target node using heuristics.</p>
+            <p><strong>Analysis:</strong> Efficiently finds the shortest path but requires accurate heuristics to be effective.</p>
             <p><a href="codes.html" class="highlight-link">View Code</a> | <a href="performance-analysis.html" class="highlight-link">View Analysis</a></p>
         </div>
     </div>
