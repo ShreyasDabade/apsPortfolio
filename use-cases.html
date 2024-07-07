@@ -10,6 +10,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
         header {
             background-color: #333;
@@ -41,12 +42,15 @@
             padding: 20px;
             margin-bottom: 30px;
             border-radius: 10px;
+            background-color: #fff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .use-case img {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
             margin-bottom: 20px;
+            border-radius: 10px;
         }
         .use-case p {
             margin-bottom: 10px;
@@ -112,6 +116,7 @@
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
 
             <h3>Compactness and Public Open Space</h3>
+            <img src="compactness_open_space.jpg" alt="Compactness and Public Open Space">
             <p><strong>Introduction:</strong> Optimizing spatial layout for compactness and open spaces can be achieved using Simulated Annealing.</p>
             <p><strong>Algorithm:</strong> Simulated Annealing</p>
             <p><strong>Description:</strong> This algorithm searches for a good approximation to the global optimum in a large search space.</p>
@@ -119,6 +124,7 @@
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
 
             <h3>Housing and Inclusiveness</h3>
+            <img src="housing_inclusiveness.jpg" alt="Housing and Inclusiveness">
             <p><strong>Introduction:</strong> Allocating housing resources efficiently can be achieved using Dynamic Programming.</p>
             <p><strong>Algorithm:</strong> Dynamic Programming (e.g., Subset Sum Problem)</p>
             <p><strong>Description:</strong> This algorithm solves problems by breaking them down into simpler subproblems.</p>
@@ -156,73 +162,32 @@
         <section class="use-case">
             <h2>Culture and Economy</h2>
             <h3>Identity and Culture</h3>
-            <img src="identity_and.jpg" alt="Identity and Culture">
+            <img src="identity_and_culture.jpg" alt="Identity and Culture">
             <p><strong>Introduction:</strong> Recommending cultural events and heritage sites can be improved using Content-Based Filtering.</p>
             <p><strong>Algorithm:</strong> Content-Based Filtering</p>
             <p><strong>Description:</strong> This algorithm recommends items based on user preferences and characteristics.</p>
-            <p><strong>Analysis:</strong> Provides personalized recommendations but requires large datasets for training and may face cold start problems.</p>
+            <p><strong>Analysis:</strong> Provides personalized recommendations but may suffer from limited content diversity.</p>
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
 
-            <h3>Economy and Employment</h3>
-            <img src="employment.webp.jpg" alt="Economy and Employment">
-            <p><strong>Introduction:</strong> Matching job seekers with job openings can be improved using Bipartite Matching.</p>
-            <p><strong>Algorithm:</strong> Bipartite Matching</p>
-            <p><strong>Description:</strong> This algorithm efficiently matches elements of two disjoint sets.</p>
-            <p><strong>Analysis:</strong> Efficient matching in polynomial time but handling preferences and constraints can be complex.</p>
-            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
-        </section>
-
-        <section class="use-case">
-            <h2>Urban Environment</h2>
-            <h3>Reduced Pollution</h3>
-            <img src="reduced_pollution.webp" alt="Reduced Pollution">
-            <p><strong>Introduction:</strong> Predicting pollution levels and identifying contributing factors can be achieved using Decision Trees.</p>
-            <p><strong>Algorithm:</strong> Decision Trees</p>
-            <p><strong>Description:</strong> This algorithm uses a tree-like model for decision making.</p>
-            <p><strong>Analysis:</strong> Easy to interpret and implement but may overfit with noisy data and requires pruning.</p>
-            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
-        </section>
-
-        <section class="use-case">
-            <h2>Transportation and Mobility</h2>
-            <h3>Public Transportation</h3>
-            <img src="public_transportation.jpg" alt="Public Transportation">
-            <p><strong>Introduction:</strong> Finding the shortest paths in transportation networks can be achieved using Dijkstra’s Algorithm.</p>
-            <p><strong>Algorithm:</strong> Dijkstra’s Algorithm</p>
-            <p><strong>Description:</strong> This algorithm finds the shortest path between nodes in a graph.</p>
-            <p><strong>Analysis:</strong> Efficient for graphs with non-negative weights but may be slower for very large graphs.</p>
+            <h3>Public Spaces</h3>
+            <img src="public_spaces.jpg" alt="Public Spaces">
+            <p><strong>Introduction:</strong> Optimizing the allocation of public spaces can be achieved using the Hungarian Algorithm.</p>
+            <p><strong>Algorithm:</strong> Hungarian Algorithm</p>
+            <p><strong>Description:</strong> This algorithm finds the optimal assignment in a weighted bipartite graph.</p>
+            <p><strong>Analysis:</strong> Efficient for small to medium-sized problems but performance may degrade with larger datasets.</p>
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
 
-            <h3>Walkability</h3>
-            <img src="walkability.jpg" alt="Walkability">
-            <p><strong>Introduction:</strong> Finding shortest paths between all pairs of nodes (e.g., walkability scores) can be achieved using the Floyd-Warshall Algorithm.</p>
-            <p><strong>Algorithm:</strong> Floyd-Warshall Algorithm</p>
-            <p><strong>Description:</strong> This algorithm finds shortest paths in a weighted graph with positive or negative edge weights.</p>
-            <p><strong>Analysis:</strong> Provides comprehensive shortest path information but has high time complexity (O(n^3)) for large graphs.</p>
-            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
-        </section>
-
-        <section class="use-case">
-            <h2>Water and Sanitation</h2>
-            <h3>Water Supply and Management</h3>
-            <img src="water_management.jpg" alt="Water Supply and Management">
-            <p><strong>Introduction:</strong> Maximizing flow in water distribution networks can be achieved using the Ford-Fulkerson Algorithm.</p>
-            <p><strong>Algorithm:</strong> Ford-Fulkerson Algorithm</p>
-            <p><strong>Description:</strong> This algorithm finds the maximum flow in a flow network.</p>
-            <p><strong>Analysis:</strong> Finds maximum flow efficiently but requires multiple iterations and can be slow for large networks.</p>
-            <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
-
-            <h3>Sanitation and Waste Management</h3>
-            <img src="waste_management.jpg" alt="Sanitation and Waste Management">
-            <p><strong>Introduction:</strong> Optimizing routes for waste collection can be achieved using Dynamic Programming.</p>
-            <p><strong>Algorithm:</strong> Dynamic Programming (e.g., Traveling Salesman Problem)</p>
-            <p><strong>Description:</strong> This algorithm finds the optimal route for visiting a set of locations and returning to the start.</p>
-            <p><strong>Analysis:</strong> Finds optimal routes under given constraints but has high computational complexity for large datasets.</p>
+            <h3>Economy</h3>
+            <img src="economy.jpg" alt="Economy">
+            <p><strong>Introduction:</strong> Predicting economic trends can be achieved using Time Series Analysis.</p>
+            <p><strong>Algorithm:</strong> Time Series Analysis (e.g., ARIMA)</p>
+            <p><strong>Description:</strong> This algorithm models and predicts future values based on past data.</p>
+            <p><strong>Analysis:</strong> Accurate for short-term predictions but may require frequent updates with new data.</p>
             <p><a href="codes.html">View Code</a> | <a href="performance-analysis.html">View Analysis</a></p>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Shreyas H Dabade</p>
+        <p>&copy; 2024 Smart City Planning. All rights reserved.</p>
     </footer>
 </body>
 </html>
